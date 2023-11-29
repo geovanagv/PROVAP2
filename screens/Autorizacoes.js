@@ -23,32 +23,31 @@ const MoradorScreen = () => {
       moradores.push(novoMorador);
       await AsyncStorage.setItem('moradores', JSON.stringify(moradores));
 
-            // Limpar os campos após salvar
-            setNome('');
-            setEmail('');
-      
-            alert('Morador salvo com sucesso!');
-          } catch (error) {
-            console.error('Erro ao salvar morador:', error);
-          }
-        };
-      
-        return (
-          <View>
-            <TextInput
-              placeholder="Nome"
-              value={nome}
-              onChangeText={(text) => setNome(text)}
-            />
-            <TextInput
-              placeholder="Email"
-              value={email}
-              onChangeText={(text) => setEmail(text)}
-            />
-            <Button title="Salvar Morador" onPress={salvarMorador} />
-          </View>
-        );
-      };
-      
-      export default MoradorScreen;
-      
+      // Limpar os campos após salvar
+      setNome('');
+      setEmail('');
+
+      alert('Morador salvo com sucesso!'); 
+    } catch (error) {
+      console.error('Erro ao salvar morador:', error);
+    }
+  };
+
+  return (
+    <View>
+      <TextInput
+        placeholder="Nome"
+        value={nome}
+        onChangeText={(text) => setNome(text)}
+      />
+      <TextInput
+        placeholder="Email"
+        value={email}
+        onChangeText={(text) => setEmail(text)}
+      />
+      <Button title="Salvar Morador" onPress={salvarMorador} />
+    </View>
+  );
+};
+
+export default MoradorScreen;

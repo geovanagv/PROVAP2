@@ -53,20 +53,26 @@ const ReservaEspacoScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
+  background: {
     flex: 1,
+    width: '100%',
+    height: '100%',
+  },
+  container: {
+    flex: 5,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f0f0f0',
+    backgroundColor: 'rgba(5, 5, 5, 0.2)', // Opacidade para melhorar a legibilidade do texto
   },
   input: {
-    width: '80%',
-    height: 50,
-    marginBottom: 20,
-    paddingHorizontal: 10,
-    borderRadius: 8,
-    borderWidth: 1,
+    width: '95%',
+    height: 75,
+    marginBottom: 35,
+    paddingHorizontal: 25,
+    borderRadius: 15,
+    borderWidth: 3,
     borderColor: '#3498db',
+    backgroundColor: '#ffff', // Cor de fundo com opacidade para destacar sobre a imagem
   },
 });
 
