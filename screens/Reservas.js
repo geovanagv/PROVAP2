@@ -10,20 +10,17 @@ const ReservaEspacoScreen = () => {
 
   const reservarEspaco = async () => {
     try {
-      // Validação dos campos
       if (!tipoEspaco || !dataReserva) {
         alert('Preencha todos os campos!');
         return;
       }
 
-      // Lógica para salvar reserva no AsyncStorage
       const novaReserva = { tipoEspaco, dataReserva };
       const reservasExistentes = await AsyncStorage.getItem('reservas');
       const reservas = reservasExistentes ? JSON.parse(reservasExistentes) : [];
       reservas.push(novaReserva);
       await AsyncStorage.setItem('reservas', JSON.stringify(reservas));
 
-      // Limpar os campos após salvar
       setTipoEspaco('');
       setDataReserva('');
 
