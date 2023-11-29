@@ -76,7 +76,7 @@ const CarManagement = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.heading}>Listagem de Carros:</Text>
+      <Text style={styles.heading}>Carros cadastrados:</Text>
       <FlatList
         style={styles.list}
         data={cars}
@@ -147,9 +147,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   formContainer: {
-    borderWidth: 1,
+    borderWidth: 3,
     borderColor: '#ccc',
-    padding: 20,
+    padding: 40,
     borderRadius: 10,
   },
   formHeading: {
@@ -158,11 +158,11 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   }, 
   input: {
-    borderWidth: 1, 
+    borderWidth: 3, 
     borderColor: '#ccc',
-    borderRadius: 5,
+    borderRadius: 15,
     marginBottom: 10,
-    paddingHorizontal: 10,
+    paddingHorizontal: 5,
   },
 });
 
