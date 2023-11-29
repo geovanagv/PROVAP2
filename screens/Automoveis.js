@@ -10,21 +10,17 @@ const CarManagement = () => {
   const [editCarId, setEditCarId] = useState(null);
 
   useEffect(() => {
-    // Lógica para buscar os carros cadastrados (AsyncStorage ou backend)
-    // Atualizar o estado "cars" com os dados
-    // Exemplo de preenchimento inicial para testes:
+    
     setCars([
       { id: 1, brand: 'Toyota', model: 'Corolla' },
       { id: 2, brand: 'Honda', model: 'Civic' },
-      // ... outros carros
     ]);
   }, []);
 
   const handleAddCar = () => {
-    // Lógica para adicionar um novo carro à lista
-    // Usando brand e model, com validação se necessário
+   
     const newCar = {
-      id: Date.now(), // Geração de um ID único (pode ser diferente em uma implementação real)
+      id: Date.now(),
       brand: brand,
       model: model,
     };
@@ -35,7 +31,6 @@ const CarManagement = () => {
   };
 
   const handleEditCar = () => {
-    // Lógica para editar os dados do carro com ID "editCarId"
     const updatedCars = cars.map((car) => {
       if (car.id === editCarId) {
         return {
