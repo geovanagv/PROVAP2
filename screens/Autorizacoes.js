@@ -27,20 +27,17 @@ const MoradorScreen = () => {
 
   const salvarMorador = async () => {
     try {
-      // Validação dos campos
       if (!nome || !email) {
         alert('Preencha todos os campos!');
         return;
       }
 
-      // Lógica para salvar no AsyncStorage
       const novoMorador = { nome, email };
       const moradoresExistentes = await AsyncStorage.getItem('moradores');
       const moradores = moradoresExistentes ? JSON.parse(moradoresExistentes) : [];
       moradores.push(novoMorador);
       await AsyncStorage.setItem('moradores', JSON.stringify(moradores));
 
-      // Limpar os campos após salvar
       setNome('');
       setEmail('');
 
@@ -52,9 +49,6 @@ const MoradorScreen = () => {
   };
 
   const editarMorador = async (index) => {
-    // Implementar a lógica para edição do morador com o índice fornecido
-    // Por exemplo, você pode abrir um modal ou navegar para outra tela para editar o morador
-    // Aqui está um exemplo simples de alerta para fins de demonstração:
     alert(`Editar morador ${moradoresSalvos[index].nome}`);
   };
 
